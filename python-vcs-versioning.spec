@@ -11,7 +11,7 @@
 
 Name:		python-vcs-versioning
 Summary:	The blessed package to manage your versions by vcs metadata
-Version:	1.1.1
+Version:	2.2.3
 Release:	1
 License:	MIT
 Group:		Development/Python
