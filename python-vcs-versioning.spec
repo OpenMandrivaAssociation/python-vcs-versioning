@@ -6,12 +6,15 @@
 # - setuptools-scm >= 10 requires vcs-versioning
 # - pytest itself also requires setuptools-scm
 # When bootstrapping, we cannot run tests at all.
-%bcond bootstrap 0
+# Python 3.15 bootstrap builds this before setuptools-scm, and the
+# test suite needs setuptools-scm, so bootstrap stays on for now.
+# Turn bootstrap off again after setuptools-scm 10.3.4 is published.
+%bcond bootstrap 1
 %bcond tests %{without bootstrap}
 
 Name:		python-vcs-versioning
 Summary:	The blessed package to manage your versions by vcs metadata
-Version:	2.2.3
+Version:	2.6.0
 Release:	1
 License:	MIT
 Group:		Development/Python
